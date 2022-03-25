@@ -17,10 +17,9 @@ Window.iconbitmap(dir)
 #Result
 #This function made for convert x to *
 def PressTimes():
-    if not result.get().__contains__("/") and not result.get().__contains__("x") and not result.get().__contains__("+") and not result.get().__contains__("-"):
-        RemoveValidation()
-        result.insert(result.index(INSERT), "x")
-        AddValidation()
+    RemoveValidation()
+    result.insert(result.index(INSERT), "x")
+    AddValidation()
 def getResult():
     global result
     global new_result
@@ -75,23 +74,17 @@ def ButtonPress(str):
         result.insert(result.index(INSERT), ".")
         AddValidation()
     elif str == "ButtonPlus":
-        if not result.get().__contains__("/") and not result.get().__contains__("x") and not result.get().__contains__("+") and not result.get().__contains__("-"):
             RemoveValidation()
             result.insert(result.index(INSERT), "+")
             AddValidation()
-        else:
-            result.insert(result.index(INSERT), "+")
     elif str == "ButtonMinus":
         RemoveValidation()
         result.insert(result.index(INSERT), "-")
         AddValidation()
     elif str == "ButtonSubstract":
-        if not result.get().__contains__("/") and not result.get().__contains__("x") and not result.get().__contains__("+") and not result.get().__contains__("-"):
             RemoveValidation()
             result.insert(result.index(INSERT), "/")
             AddValidation()
-        else:
-            result.insert(result.index(INSERT), "/")
 # Buttons
 calculate_area = tkinter.Canvas(Window)
 calculate_area.configure(width=200, height=320, bg="#203239", bd=0, highlightthickness=0)
