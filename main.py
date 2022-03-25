@@ -1,8 +1,8 @@
+import os
 import tkinter
 from functools import partial
 from sys import setrecursionlimit
 from tkinter import *
-import self
 
 Window = Tk()
 Window.geometry("329x420")
@@ -11,6 +11,8 @@ Window.title("Calculator")
 new_result = ""
 label = Label(Window,text="Developed by Miate",font=("Roboto",10),bg="#203239",fg="white")
 label.place(x=98,y=396)
+dir = str(os.getcwd()) + "\\icon.ico"
+Window.iconbitmap(dir)
 
 #Result
 #This function made for convert x to *
