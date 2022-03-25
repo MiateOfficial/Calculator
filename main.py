@@ -133,4 +133,4 @@ ButtonDot = tkinter.Button(Window, image=Dot, bd=0,command=partial(ButtonPress,"
 result.pack()
 Window.resizable(False, False)
 Window.mainloop()
-
+#
